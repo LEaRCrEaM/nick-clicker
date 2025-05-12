@@ -13,7 +13,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 var page, username = '111';
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: 'new',
     executablePath: process.env.PUPPETEER_EXECUTABLE_PATH
   });
   const pages = await browser.pages();
