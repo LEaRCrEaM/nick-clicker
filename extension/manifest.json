@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Lunar Eclipse",
+  "version": "1.0",
+  "description": "Starting Out",
+  "icons": {
+    "48": "icon.jpg",
+    "96": "icon2.jpg"
+  },
+  "action": {
+    "default_icon": {
+      "48": "icon.jpg",
+      "96": "icon2.jpg"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "devtools",
+    "devtools_page",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.tankionline.com/*",
+        "<all_urls>"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "User.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
