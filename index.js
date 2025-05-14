@@ -53,7 +53,7 @@ var page, username = '111';
   };
   while (true) {
     const stable = await isButtonVisible();
-    await wait(2000);
+    await wait(15000);
     if (stable) {
       const stillStable = await isButtonVisible();
       if (stillStable) break;
