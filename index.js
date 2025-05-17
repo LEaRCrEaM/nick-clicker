@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
 
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-var page, username = '111';
+var page, username = 'Valid';
 (async () => {
   const browser = await puppeteer.launch({
     headless: 'new',
